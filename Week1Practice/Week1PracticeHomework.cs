@@ -33,10 +33,6 @@ namespace Week1Practice
             // 3. Print out your boolean value using the format: "I set my boolean value equal to <myBool>"
             Console.WriteLine("I set my boolean value equal to: " + myBool + ".");
             // 4. Using a For loop, print out each value in productsList.
-            for (int i = 0; i < 3; i++)
-            {
-
-            }
 
 
 
@@ -123,11 +119,38 @@ namespace Week1Practice
             
 
 
-            // PUTTING IT TOGETHER ===================== DO NOT DO
+            // PUTTING IT TOGETHER
             // Use either FOR or WHILE loops to accomplish the following:
             // 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
+            int letterCount = 0;
+            for (int i = 0; i < myName.Length; i++)
+            {
+                string letter = myName[i].ToString();
+                letterCount++;
+
+            }
+            Console.WriteLine("My name, " + myName + ", has " + letterCount + " letters in it.");
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
+            int itemCount = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                string products = productsList[i];
+                itemCount++;
+            }
+            Console.WriteLine("My product list has " + itemCount + " items in it");
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
+            for (int i = 0; i < 3; i++)
+            {
+                int letterProductCount = 0;
+                string word = productsList[i];
+                char letter = word[i];
+                if (letter == word[i])
+                {
+                    letterProductCount++;
+                }
+                Console.WriteLine(word + " has " + letterProductCount + " in it.");
+                
+            }
 
             // DECLARING AND CALLING FUNCTIONS
             // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
@@ -179,7 +202,7 @@ namespace Week1Practice
             // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
-            Console.WriteLine(TripleIt(10));
+            Console.WriteLine("10 tripled is: " + TripleIt(10));
             // 6. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of myAge to print out "<myAge> tripled is <TripleIt Function Call>"
             Console.WriteLine(TripleIt(myAge));
@@ -255,6 +278,7 @@ namespace Week1Practice
         {
             return (num1 * num2);
         }
+       
 
 
 
